@@ -9,6 +9,6 @@ FactoryBot.define do
 
 	factory :gram do
 		message "hello"
-		association :user
+		association :user # calls the user factory
 	end
 end
