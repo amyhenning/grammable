@@ -8,23 +8,27 @@
   </head>
 
   <body>
-    <div class="top-nav">
-      <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
-        <div class="brand float-left">
-          <%= link_to 'Grammable', root_path %>
+    <div class="top-nav sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+        <%= link_to 'Grammable', root_path, class: 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"></ul>       
+          <ul class="navbar-nav float-right">
+              <% if current_user %>
+              <%= current_user.email %>
+              <%= link_to 'New Post', new_gram_path %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to 'Sign In', new_user_session_path %>
+              <%= link_to 'Sign Up', new_user_registration_path %>
+            <% end %>
+          </ul>
         </div>
-        <div class="add float-right">
-        	<% if current_user %>
-        		<%= current_user.email %>
-            <%= link_to 'New Post', new_gram_path %>
-            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-        	<% else %>
-        		<%= link_to 'Sign In', new_user_session_path %>
-        		<%= link_to 'Sign Up', new_user_registration_path %>
-        	<% end %>
-        </div>
-      </div>
-      <br class="clear-fix" />
+      </nav>
     </div>
 
     <%= yield %>

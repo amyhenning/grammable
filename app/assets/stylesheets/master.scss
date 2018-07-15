@@ -7,16 +7,20 @@ body {
 	font-family: 'Didact Gothic', sans-serif;
 }
 
-.top-nav {
-	background-color: white;
-	border-bottom-color: #f4ca75;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	height: 80px;
-	padding-top: 15px;
+.navbar {
+	font-family: 'Didact Gothic', sans-serif;
 }
 
-.top-nav .add a {
+.top-nav {
+	background-color: white;
+	border-bottom:  1px solid #f4ca75;
+}
+
+.navbar {
+	background-color: white !important;
+}
+
+.navbar a {
 	font-weight: bold;
 	color: #f7a502;
 	font-size: 16px;
@@ -24,15 +28,15 @@ body {
 	text-decoration: none;
 }
 
-.top-nav .add {
-	margin-top: 10px;
-}
-
-.brand a {
+.navbar a.navbar-brand {
 	color: #f7a502;
 	font-size: 30px;
 	font-family: 'Leckerli One', cursive;
 	text-decoration: none;
+}
+
+.navbar .navbar-brand:hover {
+	color: #f7a502;
 }
 
 .card {
