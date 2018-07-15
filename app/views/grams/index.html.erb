@@ -9,18 +9,18 @@
 			<p>
 				<%= gram.message %>
 			</p>
-
-			<% if current_user && current_user == gram.user %>
-				<div class="gram-actions float-right">
+				
+			<div class="gram-actions float-right">
+				<% if current_user && current_user == gram.user %>
 					<%= link_to edit_gram_path(gram) do %>
 						<span class="fa fa-edit"></span>
 					<% end %>
 					<%= link_to gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} do %>
 						<span class="fa fa-trash-o"></span>
 					<% end %>
-				</div>
-			<% end %>
-
+				<% end %>
+			</div>
+			<br class="clear-fix" />
 			<div class="comments">
 				<% gram.comments.each do |comment| %>
 					<div class="comment">
