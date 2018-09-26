@@ -1,6 +1,6 @@
 # Grammable
 
-Grammable is an Instagram clone built through numerous red/green/refactor TDD cycles using Rspec. Uses CarrierWave for image uploads and stores images on Amazon S3.
+Grammable is an Instagram clone built through numerous red/green/refactor TDD cycles using RSpec. Uses CarrierWave for image uploads and stores images on Amazon S3.
 
 ## Features
 
