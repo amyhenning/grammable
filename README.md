@@ -1,24 +1,22 @@
-# README
+# Grammable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Grammable is an Instagram clone built through numerous red/green/refactor TDD cycles using RSpec. Uses CarrierWave for image uploads and stores images on Amazon S3.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+* User accounts
 
-* System dependencies
+* Comments
 
-* Configuration
+* Edit / delete function for images
 
-* Database creation
+## Screenshots
 
-* Database initialization
+![gramview](https://github.com/amyhenning/grammable/blob/master/app/assets/images/gramview.png?raw=true)
+Application view
 
-* How to run the test suite
+![newgram](https://github.com/amyhenning/grammable/blob/master/app/assets/images/newgram.png)
+Form for posting a new image
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![gramcomment](https://github.com/amyhenning/grammable/blob/master/app/assets/images/gramcomment.png?raw=true)
+Comments for each image can be submitted directly from the image feed
